@@ -43,7 +43,9 @@ class App extends Component {
 
                    <Modal.Body>
                        <div className = "help">
-                       <p>Fill the input fields and click on a meme template</p>
+                       <p>Fill the input fields and click on a meme template,
+                           a meme will be generated at the top of the page
+                       </p>
                        </div>
                    </Modal.Body>
                   

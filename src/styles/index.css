@@ -1,7 +1,7 @@
 body {
     text-align: center;
     padding: 5%;
-    background-color: rgb(40, 29, 107);
+    background-color: black;
     color: white;
     font-family: Arial;
 
@@ -11,6 +11,7 @@ body {
 }
 .headingText{
     color: darkturquoise;
+    font-family: fantasy;
 }
 .meme-button {
     cursor: PointerEvent;
@@ -49,7 +50,7 @@ body {
 
 .red{
     color:turquoise;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: initial;
 }
 .meme-txt {
     width: 150px;
