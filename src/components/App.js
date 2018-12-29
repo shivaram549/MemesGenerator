@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import '../styles/index.css';
 import { Form, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import MemeItem from './MemeItem';
+import { Modal } from 'react-bootstrap';
 
 import MyMemes from './MyMemes';    
 class App extends Component {
@@ -12,24 +13,58 @@ class App extends Component {
         this.state = {
             memeLimit: 10,
             text0: '',
-            text1: ''
+            text1: '',
+            show: false
         }
     }
+
+    
+
+    handleShow =() => {
+        this.setState({ show: true });
+      }
+    
+      handleClose = () => {
+        this.setState({ show: false });
+      }
     render() {
         return (
             <div>
-                <h2><u>Welcome to meme making Items</u></h2>
+                <div className="red">
+                    Founder Name: Payesha
+
+                </div>
+
+                <h2 className="headingText"><u>Welcome ITEMS</u></h2>
+                <Modal show={this.state.show} onHide={this.handleClose}>
+                   <Modal.Header closeButton>
+                      <Modal.Title><div className = "help">Instructions</div></Modal.Title>
+                   </Modal.Header>
+
+                   <Modal.Body>
+                       <div className = "help">
+                       <p>Fill the input fields and click on a meme template</p>
+                       </div>
+                   </Modal.Body>
+                  
+
+                </Modal>
+                <div class="helpclick" onClick={this.handleShow} >
+                <p>Need help?</p>
+                </div>
                 <MyMemes/>
                 <h4><i>Write Some Text</i></h4>
                 <Form inline>
                  <FormGroup>
-                      <ControlLabel>Top</ControlLabel>
+                      <ControlLabel>Text1</ControlLabel>
                       {' '}
                       <FormControl type="text" onChange={(event) => this.setState({text0: event.target.value})}></FormControl>
+                      {'   '}
                  </FormGroup>
                   {' '}
+                  
                  <FormGroup>
-                      <ControlLabel>Bottom</ControlLabel>
+                      <ControlLabel>Text2</ControlLabel>
                       {' '}
                       <FormControl type="text" onChange={(event) => this.setState({text1: event.target.value})}gfffffgggggg></FormControl>
                  </FormGroup>
