@@ -31,7 +31,7 @@ class App extends Component {
         return (
             <div>
                 <div className="red">
-                    Founder Name: Payesha
+                    
 
                 </div>
 
