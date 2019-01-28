@@ -35,7 +35,7 @@ class App extends Component {
 
                 </div>
 
-                <h2 className="headingText"><u>Welcome ITEMS</u></h2>
+                <h2 className="headingText"><u>Welcome</u></h2>
                 <Modal show={this.state.show} onHide={this.handleClose}>
                    <Modal.Header closeButton>
                       <Modal.Title><div className = "help">Instructions</div></Modal.Title>
